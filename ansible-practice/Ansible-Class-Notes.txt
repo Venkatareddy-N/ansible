@@ -1,0 +1,13 @@
+ansible -i 172.31.26.196, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m dnf -a "name=nginx state=installed"
+
+
+Error while creating Expense project with Ansible
+================================================
+1. failed: [localhost] (item=mysql) => {"ansible_loop_var": "item", "changed": false, "item": "mysql", "msg": "Failed to import the required Python library (botocore and boto3)
+Solution: install botocore and boto3 packages with this command (sudo pip3.9 install botocore boto3)
+
+2. NoCredentialsError()\nbotocore.exceptions.NoCredentialsError: Unable to locate credentials\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+Solution: unable to connect to aws so we need to create iam user with full access or ec2 full access to create ec2 servers
+
+3. InvalidAMIID.Malformed
+sol: invalid AMI ID. name corrected
